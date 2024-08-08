@@ -55,7 +55,6 @@ Ensure that you have Node.js installed. If not, download and install it from Nod
 Navigate to the backend directory and install the required packages:
 
 ```bash
-Copy code
 cd realtime_stock_watchlist/backend
 npm install
 ```
@@ -63,5 +62,4 @@ npm install
 3. **Compile the TypeScript files:** 
 
 ```bash
-Copy code
 npx tsc
