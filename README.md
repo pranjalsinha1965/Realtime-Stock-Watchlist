@@ -43,5 +43,25 @@ This application allows users to manage a stock watchlist with features to add a
 1. **Clone the Repository**
 
    ```bash
-   git clone <https://github.com/pranjalsinha1965/Realtime_Stock_Watchlist.git>
+   git clone https://github.com/pranjalsinha1965/Realtime_Stock_Watchlist.git
    cd realtime_stock_watchlist
+
+### Running TypeScript Files from the Command Line
+1. **Backend Setup**
+Ensure that you have Node.js installed. If not, download and install it from Node.js official site.
+
+2. **Install Dependencies**
+
+Navigate to the backend directory and install the required packages:
+
+```bash
+Copy code
+cd realtime_stock_watchlist/backend
+npm install
+```
+
+3. **Compile the TypeScript files:** 
+
+```bash
+Copy code
+npx tsc
