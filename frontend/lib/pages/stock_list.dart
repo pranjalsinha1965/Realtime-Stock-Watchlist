@@ -12,7 +12,7 @@ class _StockListPageState extends State<StockListPage> {
 
   Future<List<dynamic>> _fetchStocks() async {
     try {
-      final response = await http.get(Uri.parse('http://127.0.0.1:3001/stocks')); // Replace <your-host-ip> with actual IP
+      final response = await http.get(Uri.parse('http://<your-host-ip>:3001/stocks')); // Replace <your-host-ip> with actual IP
 
       if (response.statusCode == 200) {
         return jsonDecode(response.body);

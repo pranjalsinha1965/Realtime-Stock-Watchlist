@@ -1,22 +1,33 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:realtime_stock_watchlist/frontend/main.dart';
+import 'package:realtime_stock_watchlist/main.dart'; // Import main.dart from lib directory
+import 'package:realtime_stock_watchlist/pages/add_stock.dart'; // Import AddStockPage
+import 'package:realtime_stock_watchlist/pages/stock_list.dart'; // Import StockListPage
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('HomePage has buttons to navigate to AddStockPage and StockListPage', (WidgetTester tester) async {
+    // Build the MyApp widget and trigger a frame.
+    await tester.pumpWidget(MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that the HomePage contains the expected buttons.
+    expect(find.text('Add Stock'), findsOneWidget);
+    expect(find.text('View Stock List'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Tap on the 'Add Stock' button and trigger a frame.
+    await tester.tap(find.text('Add Stock'));
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that navigation happened by checking if 'AddStockPage' is present.
+    expect(find.byType(AddStockPage), findsOneWidget);
+
+    // Go back to the home page.
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+
+    // Tap on the 'View Stock List' button and trigger a frame.
+    await tester.tap(find.text('View Stock List'));
+    await tester.pumpAndSettle();
+
+    // Verify that navigation happened by checking if 'StockListPage' is present.
+    expect(find.byType(StockListPage), findsOneWidget);
   });
 }

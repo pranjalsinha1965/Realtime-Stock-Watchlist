@@ -21,7 +21,7 @@ class _AddStockPageState extends State<AddStockPage> {
 
       try {
         final response = await http.post(
-          Uri.parse('http://127.0.0.1:3001/stocks'), // Replace <your-host-ip> with actual IP
+          Uri.parse('http://<your-host-ip>:3001/stocks'), // Replace <your-host-ip> with actual IP
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
           },
