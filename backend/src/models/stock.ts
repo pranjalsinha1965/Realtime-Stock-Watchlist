@@ -1,13 +1,16 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
 export class Stock {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;  // Using non-null assertion
 
   @Column()
-  symbol: string;
+  symbol!: string;  // Using non-null assertion
 
   @Column()
-  name: string;
+  name!: string;  // Using non-null assertion
+
+  @Column('float')
+  price!: number;  // Using non-null assertion
 }

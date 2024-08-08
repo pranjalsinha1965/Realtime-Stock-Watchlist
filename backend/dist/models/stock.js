@@ -21,9 +21,13 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
+], Stock.prototype, "symbol", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
 ], Stock.prototype, "name", void 0);
 __decorate([
-    (0, typeorm_1.Column)("decimal"),
+    (0, typeorm_1.Column)('float'),
     __metadata("design:type", Number)
 ], Stock.prototype, "price", void 0);
 exports.Stock = Stock = __decorate([
