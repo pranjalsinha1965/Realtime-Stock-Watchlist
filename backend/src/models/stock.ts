@@ -3,14 +3,14 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 @Entity()
 export class Stock {
   @PrimaryGeneratedColumn()
-  id!: number;  // Using non-null assertion
+  id!: number;  // Automatically generated unique identifier for each stock
 
-  @Column()
-  symbol!: string;  // Using non-null assertion
+  @Column({ type: 'varchar', length: 10, unique: true })
+  symbol!: string;  // Stock symbol (e.g., AAPL for Apple)
 
-  @Column()
-  name!: string;  // Using non-null assertion
+  @Column({ type: 'varchar', length: 255 })
+  name!: string;  // Full name of the stock
 
-  @Column('float')
-  price!: number;  // Using non-null assertion
+  @Column({ type: 'float', precision: 2 })
+  price!: number;  // Price of the stock
 }

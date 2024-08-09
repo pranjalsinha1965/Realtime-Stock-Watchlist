@@ -2,8 +2,9 @@ import 'reflect-metadata';
 import express from 'express';
 import { DataSource } from 'typeorm';
 import { Stock } from './models/stock';
+import cors from 'cors';
 
-// Initialize TypeORM Data Source
+// Initialize Data Source
 export const AppDataSource = new DataSource({
   type: 'postgres',
   host: 'localhost',
@@ -11,18 +12,20 @@ export const AppDataSource = new DataSource({
   username: 'postgres',
   password: 'postgres',
   database: 'portfolio',
-  synchronize: true, // Automatically creates database schema
+  synchronize: false, // Set to false to use migrations
   logging: false,
   entities: [Stock],
 });
 
-// Create Express Application
+// Create an Express application
 const app = express();
 const PORT = process.env.PORT || 3001; // Default port for the application
 
+// Middleware setup
 app.use(express.json());
+app.use(cors()); // Enable CORS for development
 
-// Define routes
+// Routes
 app.get('/stocks', async (req, res) => {
   try {
     const stockRepository = AppDataSource.getRepository(Stock);
@@ -46,12 +49,14 @@ app.post('/stocks', async (req, res) => {
   }
 });
 
-// Start Server and Initialize Data Source
+// Start the server
 const startServer = async () => {
   try {
+    // Initialize Data Source
     await AppDataSource.initialize();
     console.log('Data Source has been initialized!');
-    
+
+    // Start Express server
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
