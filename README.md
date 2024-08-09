@@ -63,3 +63,28 @@ npm install
 
 ```bash
 npx tsc
+
+```
+
+# Final Steps for running the Mobile Web Application
+
+1. **Relocate to the folder backend:**
+
+``` bash
+cd backend
+```
+
+2. **Run the backend:** 
+
+``` bash
+npx ts-node src/index.ts
+```
+3. **Relocate to the folder frontend:**
+
+``` bash
+flutter clean
+flutter doctor
+flutter run
+```
+
+
