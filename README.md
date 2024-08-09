@@ -1,5 +1,14 @@
 # Real-Time Stock Watchlist Management Web Application
 
+## Fundsroom-Round1
+
+Submission Link: https://docs.google.com/forms/d/e/1FAIpQLSfwoyREEYWLTEdZxBMLPM_BqmoaGTbVoP7bBJNEFw2-wXwXMg/viewform
+
+Working on ChatPGT Response:
+Sure, let's include a specific feature related to portfolio tracking, a common feature in Upstox, Groww, or Angel One. We'll expand the TODO app to include a portfolio tracker that can add and display stocks with their current prices.
+
+Deadline: 10th August, 2024 at 10:00 am
+
 ## Overview
 
 This application allows users to manage a stock watchlist with features to add and view stocks. It is built using Flutter and Dart for the frontend and TypeScript with Express and PostgreSQL for the backend. The backend is containerized using Docker.
