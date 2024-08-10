@@ -11,7 +11,7 @@ Deadline: 10th August, 2024 at 10:00 am
 # Solution
 
 Hi there, 
-this is my solution video link: https://drive.google.com/file/d/1tWBySEUt_OOEsLaw38QPId04LrROsqyG/view?usp=sharing
+this is my solution video link: https://drive.google.com/file/d/1C-CHZL4MlaJ7D25Mw3ESsLu5X9zfOM4I/view?usp=sharing
 
 # Application Setup Instructions
 
