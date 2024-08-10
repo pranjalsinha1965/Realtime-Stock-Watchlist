@@ -4,14 +4,14 @@
 
 Submission Link: https://docs.google.com/forms/d/e/1FAIpQLSfwoyREEYWLTEdZxBMLPM_BqmoaGTbVoP7bBJNEFw2-wXwXMg/viewform
 
-Working on ChatPGT Response:
 Sure, let's include a specific feature related to portfolio tracking, a common feature in Upstox, Groww, or Angel One. We'll expand the TODO app to include a portfolio tracker that can add and display stocks with their current prices.
 
 Deadline: 10th August, 2024 at 10:00 am
 
 # Solution
 
-Hi there this is my solution video link: https://drive.google.com/file/d/1JkTRAkZXRz_4k1YTwAMHQJIsOyQzp07E/view?usp=sharing
+Hi there, 
+this is my solution video link: https://drive.google.com/file/d/1E5D6vI1qL68o6q7SsoU4hRLm_j6bn5rq/view?usp=sharing
 
 # Application Setup Instructions
 
