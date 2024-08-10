@@ -11,6 +11,8 @@ Deadline: 10th August, 2024 at 10:00 am
 
 # Solution
 
+Hi there this is my solution video link: https://drive.google.com/file/d/1JkTRAkZXRz_4k1YTwAMHQJIsOyQzp07E/view?usp=sharing
+
 # Application Setup Instructions
 
 **Important Note:** The current version of the application requires the specific Flutter SDK version specified in the `pubspec.yml` file. Ensure this version is installed in your emulator. If it's not, the application will default to running in a Chrome tab instead.
