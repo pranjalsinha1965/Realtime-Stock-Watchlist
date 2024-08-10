@@ -9,6 +9,11 @@ Sure, let's include a specific feature related to portfolio tracking, a common f
 
 Deadline: 10th August, 2024 at 10:00 am
 
+# Solution
+
+Kindly note that present version of the application will open in an emulator only if the requires version of Flutter SDK present in pubsec.yml is installed in that emulator. If not the case then the application will surely start running in another chrome tab. Just choose tha option chrome after running the following given steps and then it will ping to paticular link for example: http://localhost:xxxx. Follow the procedure given below to run the application datatbase related components have also been used you can find the file with extension sql as given in the repository.
+
+
 ## Overview
 
 This application allows users to manage a stock watchlist with features to add and view stocks. It is built using Flutter and Dart for the frontend and TypeScript with Express and PostgreSQL for the backend. The backend is containerized using Docker.
@@ -56,6 +61,7 @@ This application allows users to manage a stock watchlist with features to add a
    cd realtime_stock_watchlist
 
 ### Running TypeScript Files from the Command Line
+
 1. **Backend Setup**
 Ensure that you have Node.js installed. If not, download and install it from Node.js official site.
 
