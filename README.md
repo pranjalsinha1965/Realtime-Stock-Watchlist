@@ -11,8 +11,72 @@ Deadline: 10th August, 2024 at 10:00 am
 
 # Solution
 
-Kindly note that present version of the application will open in an emulator only if the requires version of Flutter SDK present in pubsec.yml is installed in that emulator. If not the case then the application will surely start running in another chrome tab. Just choose tha option chrome after running the following given steps and then it will ping to paticular link for example: http://localhost:xxxx. Follow the procedure given below to run the application datatbase related components have also been used you can find the file with extension sql as given in the repository.
+# Application Setup Instructions
 
+**Important Note:** The current version of the application requires the specific Flutter SDK version specified in the `pubspec.yml` file. Ensure this version is installed in your emulator. If it's not, the application will default to running in a Chrome tab instead.
+
+## Steps to Run the Application in Chrome
+
+1. **Run the Application:**
+   - Open your terminal or command prompt.
+   - Navigate to the project directory.
+   - Execute the following command:
+     ```bash
+     flutter run
+     ```
+   - If the Flutter SDK version in the emulator is incompatible, select the **Chrome** option when prompted. This will open the application in a Chrome browser tab.
+
+2. **Access the Application:**
+   - Once running, the application will be accessible through a specific local link, such as:
+     ```
+     http://localhost:xxxx
+     ```
+   - Replace `xxxx` with the port number provided by the terminal.
+
+3. **Database Components:**
+   - The application also uses a database. You can find the relevant SQL files in the repository, with the `.sql` extension.
+   - Ensure you follow any database setup instructions provided in the repository to properly configure the application.
+
+# Important Note:
+
+1. **PostgreSQL Server Requirement:**
+   - This application requires a PostgreSQL server configured with specific credentials. You will need to update the credentials in your environment as per your setup in VS Code.
+
+2. **Example JSON Credentials:**
+   Below is an example of the JSON file for the credentials as used in the application. These credentials will need to be modified based on your setup:
+
+   ```json
+   {
+     "host": "localhost",
+     "user": "postgres",
+     "port": 5432,
+     "ssl": false,
+     "database": "portfolio",
+     "password": "postgres"
+   }
+
+1. C:Realtime_Stock_Watchlist\backend\src\models\stock.ts
+2. C:Realtime_Stock_Watchlist\backend\src\routes\stockRoutes.ts
+3. C:Realtime_Stock_Watchlist\backend\src\index.ts
+
+File Paths to Update:
+You need to update the credentials in the following files:
+C:\Realtime_Stock_Watchlist\backend\src\models\stock.ts
+C:\Realtime_Stock_Watchlist\backend\src\routes\stockRoutes.ts
+C:\Realtime_Stock_Watchlist\backend\src\index.ts
+
+3. **Application Startup Order:**
+   - The application may not run properly unless the following order is followed:
+     1. **Run the backend** first.
+     2. Then, **run the frontend** using the `flutter run` command in the respective folders.
+
+4. **Database Configuration:**
+   - The application might not be able to add stocks initially because it requires the URL of `localhost` obtained after running the backend server. Ensure the backend server is running so that the database is properly configured. The frontend will function correctly only after this step.
+
+5. **SQL Operations:**
+   - For further relational operations, please use SQL INT-TOOLS. You can remove the commands from comments as specified in the files with a `.sql` extension. Follow the same format for these files:
+     1. C:\Realtime_Stock_Watchlist\StockWebApi.session.sql
+     2. C:\Realtime_Stock_Watchlist\database\init.sql
 
 ## Overview
 
